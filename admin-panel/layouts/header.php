@@ -6,7 +6,9 @@
   define("ADMINURL", "http://localhost/restoran/admin-panel");
 
 
-?><!DOCTYPE html>
+?>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -22,7 +24,7 @@
 <div id="wrapper">
     <nav class="navbar header-top fixed-top navbar-expand-lg  navbar-dark bg-dark">
       <div class="container">
-      <a class="navbar-brand" href="#">LOGO</a>
+      <a class="navbar-brand" href="<?php echo ADMINURL; ?>">RESTORAN Admin Panel</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText"
         aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -40,13 +42,22 @@
             <a class="nav-link" href="<?php echo ADMINURL; ?>/admins/admins.php" style="margin-left: 20px;">Admins</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="<?php echo ADMINURL; ?>/orders-admins/show-orders.php" style="margin-left: 20px;">Orders</a>
+            <a class="nav-link" href="<?php echo ADMINURL; ?>/users/users.php" style="margin-left: 20px;">Users</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="<?php echo ADMINURL; ?>/foods-admins/show-foods.php" style="margin-left: 20px;">Foods</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="<?php echo ADMINURL; ?>/orders-admins/show-orders.php" style="margin-left: 20px;">Orders</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="<?php echo ADMINURL; ?>/bookings-admins/show-bookings.php" style="margin-left: 20px;">Bookings</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="<?php echo ADMINURL; ?>/orders-admins/show-payments.php" style="margin-left: 20px;">Payments</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="<?php echo ADMINURL; ?>/users/user-messages.php" style="margin-left: 20px;">Customer Enquiries</a>
           </li>
         </ul>
         <?php endif; ?>

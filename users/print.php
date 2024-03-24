@@ -155,24 +155,24 @@ foreach ($data as $row) {
 $pdf->SetFont('dejavusans','B', 15);
 $pdf->SetFillColor(255, 200, 30);
 $pdf->Rect(0, 236, $pdf->GetPageWidth(), 60, 'F');
-$pdf->Cell(0, 10, 'Follow Us:', 0, 1, 'R'); 
+$pdf->Cell(0, 10, 'Follow Us:', 0, 1, 'L'); 
 
 $pdf->SetFont('dejavusans','', 13);
 
 $instagramIconPath = 'images/insta.jpg'; 
-$pdf->Image($instagramIconPath, $pdf->GetX() + 114, $pdf->GetY(), 9);
-$pdf->SetX($pdf->GetX() + 20); 
-$pdf->Cell(0, 10, 'instagram.com/restoran', 0, 1, 'R'); 
+$pdf->Image($instagramIconPath, $pdf->GetX() + 0, $pdf->GetY(), 9);
+$pdf->SetX($pdf->GetX() + 12); 
+$pdf->Cell(0, 10, 'instagram.com/restoran', 0, 1, 'L'); 
 
 $facebookIconPath = 'images/facebook.jpg'; 
-$pdf->Image($facebookIconPath, $pdf->GetX() + 114, $pdf->GetY(), 9); 
-$pdf->SetX($pdf->GetX() + 20); 
-$pdf->Cell(0, 10, 'facebook.com/restoran', 0, 1, 'R'); 
+$pdf->Image($facebookIconPath, $pdf->GetX() + 0, $pdf->GetY(), 9); 
+$pdf->SetX($pdf->GetX() + 12); 
+$pdf->Cell(0, 10, 'facebook.com/restoran', 0, 1, 'L'); 
 
 $mailIconPath = 'images/mail.jpg'; 
-$pdf->Image($mailIconPath, $pdf->GetX() + 114, $pdf->GetY(), 9); 
-$pdf->SetX($pdf->GetX() + 20); 
-$pdf->Cell(0, 10, 'restoran@gmail.com', 0, 1, 'R'); 
+$pdf->Image($mailIconPath, $pdf->GetX() + 0, $pdf->GetY(), 9); 
+$pdf->SetX($pdf->GetX() + 12); 
+$pdf->Cell(0, 10, 'restoran@gmail.com', 0, 1, 'L'); 
 
 $numberOfPages = $pdf->getNumPages();
 for ($pageNumber = 1; $pageNumber <= $numberOfPages; $pageNumber++) {
