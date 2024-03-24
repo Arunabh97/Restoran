@@ -44,7 +44,7 @@
                     <td>
                     <?php echo $order->address; ?>
                     </td>
-                    <td>$<?php echo $order->total_price; ?></td>
+                    <td>₹<?php echo $order->total_price; ?></td>
                     <td><?php echo $order->status; ?></td>
 
                     <td><a href="status.php?id=<?php echo $order->id; ?>" class="btn btn-primary  text-center ">status</a></td>

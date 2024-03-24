@@ -45,7 +45,7 @@
                             <th scope="col">address</th>
                             <th scope="col">total_price</th>
                             <th scope="col">status</th>
-                            <th scope="col">date</th>
+                            <th scope="col">invoice</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -58,9 +58,15 @@
                                         <td><?php echo $order->zipcode; ?></td>
                                         <td><?php echo $order->phone_number; ?></td>
                                         <td><?php echo $order->address; ?></td>
-                                        <td>$<?php echo $order->total_price; ?></td>
+                                        <td>₹<?php echo $order->total_price; ?></td>
                                         <td><?php echo $order->status; ?></td>
-                                        <td><?php echo $order->created_at; ?></td>
+                                        <td class="inovice">
+												<?php if ($order->status == "Confirmed") : ?>
+                                                    <a class="btn btn-success" href="print.php?order_id=<?php echo $order->id; ?>" target="_blank">Download</a>
+												<?php else : ?>
+													N/A
+												<?php endif; ?>
+											</td>
                                     </tr>
                                 <?php endforeach; ?>
                        

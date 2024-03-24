@@ -29,22 +29,22 @@
                         <div class="row gy-4">
                             <div class="col-md-4">
                                 <h5 class="section-title ff-secondary fw-normal text-start text-primary">Booking</h5>
-                                <p><i class="fa fa-envelope-open text-primary me-2"></i>book@example.com</p>
+                                <p><i class="fa fa-envelope-open text-primary me-2"></i>For any queries related to our offerings or services, reach out to us at <a href="mailto:restoran@gmail.com">restoran@gmail.com</a> We're here to assist you!</p>
                             </div>
                             <div class="col-md-4">
                                 <h5 class="section-title ff-secondary fw-normal text-start text-primary">General</h5>
-                                <p><i class="fa fa-envelope-open text-primary me-2"></i>info@example.com</p>
+                                <p><i class="fa fa-phone text-primary me-2"></i>Contact us at <a href="tel:info@example.com">+012 345 67890</a> for any inquiries or assistance. We're here to help you with your queries!</p>
                             </div>
                             <div class="col-md-4">
                                 <h5 class="section-title ff-secondary fw-normal text-start text-primary">Technical</h5>
-                                <p><i class="fa fa-envelope-open text-primary me-2"></i>tech@example.com</p>
+                                <p><i class="fa fa-cogs text-primary me-2"></i>For technical assistance or inquiries, contact us at <a href="mailto:restoran@gmail.com">restoran@gmail.com</a> Our team is here to support you!</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 wow fadeIn" data-wow-delay="0.1s">
                         <iframe class="position-relative rounded w-100 h-100"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001156.4288297426!2d-78.01371936852176!3d42.72876761954724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd"
-                            frameborder="0" style="min-height: 350px; border:0;" allowfullscreen="" aria-hidden="false"
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14711.536915463066!2d86.1286049!3d22.8067533!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f5e57328aee75b%3A0xc2c7b1b0b9cf711d!2sRED%20VILLA!5e0!3m2!1sen!2sin!4v1711204638852!5m2!1sen!2sin"
+                            frameborder="0" style="min-height: 370px; border:0;" allowfullscreen="" aria-hidden="false"
                             tabindex="0"></iframe>
                     </div>
                     <div class="col-md-6">

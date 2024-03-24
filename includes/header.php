@@ -1,8 +1,18 @@
 <?php 
 
-    $app = new App;
-    $app->startingSession();
-
+  $servername = "localhost";
+  $username = "root";
+  $password = "";
+  $dbname = "restoran";
+  
+  try {
+      $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+      $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  } catch(PDOException $e) {
+      echo "Connection failed: " . $e->getMessage();
+  }
+  
+    session_start();
     define("APPURL", "http://localhost/restoran");
     define("APPIMAGES", "http://localhost/restoran/admin-panel/foods-admins/foods-images");
 
@@ -18,13 +28,13 @@
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="<?php echo APPURL; ?>/img/favicon.ico" rel="icon">
+    <link href="<?php echo APPURL; ?>/img/favicon.png" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&family=Pacifico&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
@@ -65,20 +75,33 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0 pe-4">
                         <a href="<?php echo APPURL; ?>" class="nav-item nav-link active">Home</a>
-                        <a href="<?php echo APPURL; ?>/about.php" class="nav-item nav-link">About</a>
+                        <a href="<?php echo APPURL; ?>/menu.php" class="nav-item nav-link">MENU</a>
                         <a href="<?php echo APPURL; ?>/service.php" class="nav-item nav-link">Service</a>
+                        <a href="<?php echo APPURL; ?>/about.php" class="nav-item nav-link">About</a>
                         <a href="<?php echo APPURL; ?>/contact.php" class="nav-item nav-link">Contact</a>
                         <?php if(isset($_SESSION['username'])) : ?>
                         <a href="<?php echo APPURL; ?>/booking.php" class="nav-item nav-link">Booking</a>
 
-                        <a href="<?php echo APPURL; ?>/food/cart.php" class="nav-item nav-link"><i class="fa-sharp fa-solid fa-cart-shopping"></i>Cart</a>
+                        <a href="<?php echo APPURL; ?>/food/cart.php" class="nav-item nav-link"><i class="fa-solid fa-cart-shopping"></i>
+                        <?php
+                            $cartCount = 0; 
+                            if (isset($_SESSION['user_id'])) {
+                                $cartQuery = $conn->query("SELECT COUNT(*) AS count FROM cart WHERE user_id = '$_SESSION[user_id]'");
+                                $cartCountResult = $cartQuery->fetch(PDO::FETCH_ASSOC);
+                                $cartCount = $cartCountResult['count'];
+                            }
+                            ?>
+                            <?php if ($cartCount > 0) : ?>
+                                <span class="badge bg-primary"><?php echo $cartCount; ?></sup>
+                            <?php endif; ?>
+                        </a>
                         <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                    <?php echo $_SESSION['username']; ?>
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="<?php echo APPURL; ?>/users/bookings.php">Bookings</a></li>
-                                    <li><a class="dropdown-item" href="<?php echo APPURL; ?>/users/orders.php">Orders</a></li>
+                                    <li><a class="dropdown-item" href="<?php echo APPURL; ?>/users/bookings.php">My Bookings</a></li>
+                                    <li><a class="dropdown-item" href="<?php echo APPURL; ?>/users/orders.php">My Orders</a></li>
                                     <li><hr class="dropdown-divider"></li>
                                     <li><a class="dropdown-item" href="<?php echo APPURL; ?>/auth/logout.php">Logout</a></li>
                                 </ul>

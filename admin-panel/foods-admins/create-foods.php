@@ -74,6 +74,11 @@
                     <option value="1">Breakfast</option>
                     <option value="2">Launch</option>
                     <option value="3">Dinner</option>
+                    <option value="4">Starters</option>
+                    <option value="5">Main Courses</option>
+                    <option value="6">Vegetarian</option>
+                    <option value="7">Desserts</option>
+                    <option value="8">Beverages</option>
                   </select>
                 </div>
 

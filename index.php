@@ -29,7 +29,7 @@
                     <div class="row align-items-center g-5">
                         <div class="col-lg-6 text-center text-lg-start">
                             <h1 class="display-3 text-white animated slideInLeft">Enjoy Our<br>Delicious Meal</h1>
-                            <p class="text-white animated slideInLeft mb-4 pb-2">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                            <p class="text-white animated slideInLeft mb-4 pb-2">Welcome to our exquisite restaurant food order and reservation website, where culinary excellence meets seamless convenience. Whether you're craving the rich flavors of traditional cuisines or yearning for innovative culinary creations, our platform serves as your gateway to gastronomic delight.</p>
                             <a href="<?php echo APPURL; ?>/booking.php" class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft">Book A Table</a>
                         </div>
                         <div class="col-lg-6 text-center text-lg-end overflow-hidden">
@@ -51,7 +51,7 @@
                             <div class="p-4">
                                 <i class="fa fa-3x fa-user-tie text-primary mb-4"></i>
                                 <h5>Master Chefs</h5>
-                                <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                                <p>Indulge in exquisite dishes crafted by our master chefs, elevating your dining experience to new heights of culinary delight.</p>
                             </div>
                         </div>
                     </div>
@@ -60,7 +60,7 @@
                             <div class="p-4">
                                 <i class="fa fa-3x fa-utensils text-primary mb-4"></i>
                                 <h5>Quality Food</h5>
-                                <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                                <p>Savor the finest ingredients meticulously prepared to perfection, ensuring each bite is a symphony of flavors.</p>
                             </div>
                         </div>
                     </div>
@@ -69,7 +69,7 @@
                             <div class="p-4">
                                 <i class="fa fa-3x fa-cart-plus text-primary mb-4"></i>
                                 <h5>Online Order</h5>
-                                <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                                <p>Seamlessly place your orders online with just a few clicks, enjoying convenience and efficiency at your fingertips.</p>
                             </div>
                         </div>
                     </div>
@@ -78,7 +78,7 @@
                             <div class="p-4">
                                 <i class="fa fa-3x fa-headset text-primary mb-4"></i>
                                 <h5>24/7 Service</h5>
-                                <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                                <p>Experience unparalleled service around the clock, ensuring your cravings are satisfied whenever hunger strikes.</p>
                             </div>
                         </div>
                     </div>
@@ -111,8 +111,8 @@
                     <div class="col-lg-6">
                         <h5 class="section-title ff-secondary text-start text-primary fw-normal">About Us</h5>
                         <h1 class="mb-4">Welcome to <i class="fa fa-utensils text-primary me-2"></i>Restoran</h1>
-                        <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos erat ipsum et lorem et sit, sed stet lorem sit.</p>
-                        <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                        <p class="mb-4">Welcome to <span style="background-color: #FFFF00;"><strong>Restoran</strong></span>, where passion for food meets unparalleled hospitality. We pride ourselves on delivering an exceptional dining experience that transcends mere sustenance. Founded on the principles of culinary excellence and genuine warmth, our restaurant is more than just a place to eat; it's a destination where memories are made and stories are shared.</p>
+                        <p class="mb-4">At <span style="background-color: #FFFF00;"><strong>Restoran</strong></span>, we believe in celebrating the art of food, sourcing the finest ingredients and infusing them with creativity and expertise to delight your palate. Whether you're craving classic comfort foods or daring culinary innovations, our menu offers a diverse selection to cater to every taste and occasion.</p>
                         <div class="row g-4 mb-4">
                             <div class="col-sm-6">
                                 <div class="d-flex align-items-center border-start border-5 border-primary px-3">
@@ -164,7 +164,7 @@
                                 <i class="fa fa-hamburger fa-2x text-primary"></i>
                                 <div class="ps-3">
                                     <small class="text-body">Special</small>
-                                    <h6 class="mt-n1 mb-0">Launch</h6>
+                                    <h6 class="mt-n1 mb-0">Lunch</h6>
                                 </div>
                             </a>
                         </li>
@@ -188,7 +188,7 @@
                                             <div class="w-100 d-flex flex-column text-start ps-4">
                                                 <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                     <span><?php echo $meal_1->name; ?></span>
-                                                    <span class="text-primary">$<?php echo $meal_1->price; ?></span>
+                                                    <span class="text-primary">₹<?php echo $meal_1->price; ?></span>
                                                 </h5>
                                                 <small class="fst-italic"><?php echo $meal_1->description; ?></small>
                                                 <a type="button" href="<?php echo APPURL; ?>/food/add-cart.php?id=<?php echo $meal_1->id; ?>" class="btn btn-primary py-2 top-0 end-0 mt-2 me-2">view</a>
@@ -209,7 +209,7 @@
                                                 <div class="w-100 d-flex flex-column text-start ps-4">
                                                     <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                         <span><?php echo $meal_2->name; ?></span>
-                                                        <span class="text-primary">$<?php echo $meal_2->price; ?></span>
+                                                        <span class="text-primary">₹<?php echo $meal_2->price; ?></span>
                                                     </h5>
                                                     <small class="fst-italic"><?php echo $meal_2->description; ?></small>
                                                     <a type="button" href="<?php echo APPURL; ?>/food/add-cart.php?id=<?php echo $meal_2->id; ?>" class="btn btn-primary py-2 top-0 end-0 mt-2 me-2">view</a>
@@ -229,7 +229,7 @@
                                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                                 <span><?php echo $meal_3->name; ?></span>
-                                                                <span class="text-primary">$<?php echo $meal_3->price; ?></span>
+                                                                <span class="text-primary">₹<?php echo $meal_3->price; ?></span>
                                                             </h5>
                                                             <small class="fst-italic"><?php echo $meal_3->description; ?></small>
                                                             <a type="button" href="<?php echo APPURL; ?>/food/add-cart.php?id=<?php echo $meal_3->id; ?>" class="btn btn-primary py-2 top-0 end-0 mt-2 me-2">view</a>

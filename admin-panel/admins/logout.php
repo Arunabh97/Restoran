@@ -6,3 +6,5 @@
     session_destroy();
 
     header("location: http://localhost/restoran/admin-panel/admins/login-admins.php");
+    
+?>

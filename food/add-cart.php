@@ -27,10 +27,11 @@
             $price = $_POST['price'];
             $image = $_POST['image'];
             $user_id = $_SESSION['user_id'];
+            $quantity = $_POST['quantity'];
     
     
-            $query = "INSERT INTO cart (item_id, name, price, image, user_id) VALUES (:item_id, 
-            :name, :price, :image, :user_id)";
+            $query = "INSERT INTO cart (item_id, name, price, image, user_id, quantity) VALUES (:item_id, 
+            :name, :price, :image, :user_id, :quantity)";
     
             $arr = [
                 ":item_id" =>  $item_id,
@@ -38,6 +39,7 @@
                 ":price" =>  $price,
                 ":image" =>  $image,
                 ":user_id" =>  $user_id,
+                ":quantity" =>  $quantity,
             ];
     
             $path = "add-cart.php?id=".$id."";
@@ -55,7 +57,23 @@
 
 
 ?>
+<style>
+    .custom-quantity {
+    width: 200px;
+    height: 50px;
+}
 
+.custom-quantity .btn {
+    width: 50px; 
+    font-size: 2rem; 
+}
+
+.custom-quantity input[type="number"] {
+    width: calc(100% - 60px); 
+    text-align: center;
+}
+
+    </style>
             <div class="container-xxl py-5 bg-dark hero-header mb-5">
                 <div class="container text-center my-5 pt-5 pb-4">
                     <h1 class="display-3 text-white mb-3 animated slideInDown"><?php echo $one->name; ?></h1>
@@ -91,7 +109,7 @@
                         <div class="row g-4 mb-4">
                             <div class="col-sm-6">
                                 <div class="d-flex align-items-center border-start border-5 border-primary px-3">
-                                    <h3>Price: $ <?php echo $one->price; ?> </h3>                                   
+                                    <h3>Price: ₹ <?php echo $one->price; ?> </h3>                                   
                                 </div>
                             </div>
                            
@@ -101,6 +119,11 @@
                             <input type="hidden" name="name" value="<?php echo $one->name; ?>">
                             <input type="hidden" name="image" value="<?php echo $one->image; ?>">
                             <input type="hidden" name="price"  value="<?php echo $one->price; ?>">
+                            <div class="input-group mb-3 custom-quantity">
+                                <button type="button" class="btn btn-outline-secondary btn-sm" onclick="decreaseQuantity()">-</button>
+                                <input type="text" class="form-control form-control-sm" name="quantity" value="1">
+                                <button type="button" class="btn btn-outline-secondary btn-sm" onclick="increaseQuantity()">+</button>
+                            </div>
                             <?php if(isset($_SESSION['user_id'])) : ?>
                                 <?php if($count > 0) : ?>
                                     <button name="submit" type="submit" class="btn btn-primary py-3 px-5 mt-2" disabled>Added to Cart</button>
@@ -115,6 +138,23 @@
             </div>
         </div>
 
+        <script>
+    function decreaseQuantity() {
+        var quantityInput = document.querySelector('input[name="quantity"]');
+        var currentValue = parseInt(quantityInput.value);
+        if (currentValue > 1) {
+            quantityInput.value = currentValue - 1;
+        }
+    }
+
+    function increaseQuantity() {
+        var quantityInput = document.querySelector('input[name="quantity"]');
+        var currentValue = parseInt(quantityInput.value);
+        if (currentValue < 5) { // Maximum quantity is 5
+            quantityInput.value = currentValue + 1;
+        }
+    }
+</script>
 <?php require "../includes/footer.php"; ?>
 
    
