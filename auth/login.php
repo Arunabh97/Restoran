@@ -1,8 +1,8 @@
 <?php require "../config/config.php"; ?>
 <?php require "../libs/App.php"; ?>
 <?php require "../includes/header.php"; ?>
-<?php 
 
+<?php 
 
     $app = new App;
     $app->validateSession();
@@ -26,9 +26,15 @@
 
     }
 
-
-
 ?>
+
+<style>
+    .eye-toggle {
+        font-size: 1.5rem;
+        padding: 10px;
+        color: #6c757d; 
+    }
+</style>
 
             <div class="container-xxl py-5 bg-dark hero-header mb-5">
                 <div class="container text-center my-5 pt-5 pb-4">
@@ -61,14 +67,14 @@
                                         <label for="email">Your Email</label>
                                     </div>
                                 </div>
+
                                 <div class="">
-                                    <div class="form-floating">
-                                        <input name="password" type="password" class="form-control" id="email" placeholder="Your Email">
+                                    <div class="form-floating position-relative">
+                                        <input name="password" type="password" class="form-control" id="password" placeholder="Your Password">
                                         <label for="password">Password</label>
+                                        <span toggle="#password" class="eye-toggle bi bi-eye-slash position-absolute end-0 top-50 translate-middle-y" style="cursor: pointer;"></span>
                                     </div>
                                 </div>
-                               
-                               
                                
                                 <div class="col-md-12">
                                     <button name="submit" class="btn btn-primary w-100 py-3" type="submit">Login</button>
@@ -78,8 +84,23 @@
                     </div>
                 </div>
             </div>
-        <!-- Service End -->
-        
+
+
+<script>
+
+document.addEventListener('DOMContentLoaded', function() {
+    const togglePassword = document.querySelector('.eye-toggle');
+    const passwordField = document.querySelector(togglePassword.getAttribute('toggle'));
+
+    togglePassword.addEventListener('click', function() {
+        const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+        passwordField.setAttribute('type', type);
+        this.classList.toggle('bi-eye');
+        this.classList.toggle('bi-eye-slash');
+    });
+});
+
+</script>        
 
 <?php require "../includes/footer.php"; ?>
      
