@@ -32,7 +32,12 @@
     .eye-toggle {
         font-size: 1.5rem;
         padding: 10px;
-        color: #6c757d; 
+        color: #6c757d;
+        cursor: pointer;
+    }
+
+    .eye-toggle:hover {
+        color: #007bff;
     }
 </style>
 
