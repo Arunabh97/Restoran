@@ -15,7 +15,7 @@ $users = $app->selectAll($query);
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title mb-4 d-inline">Users</h5>
-                <a href="create-user.php" class="btn btn-primary mb-4 text-center float-right">Create User</a>
+                <a href="create-users.php" class="btn btn-primary mb-4 text-center float-right">Create User</a>
                 <table class="table">
                     <thead>
                         <tr>
@@ -34,8 +34,8 @@ $users = $app->selectAll($query);
                                 <td><?php echo $user->email; ?></td>
                                 <td><?php echo $user->created_at; ?></td>
                                 <td>
-                                    <a href="edit-user.php?id=<?php echo $user->id; ?>" class="btn btn-primary btn-sm">Edit</a>
-                                    <a href="delete-user.php?id=<?php echo $user->id; ?>" class="btn btn-danger btn-sm">Delete</a>
+                                    <a href="edit-users.php?id=<?php echo $user->id; ?>" class="btn btn-primary btn-sm">Edit</a>
+                                    <a href="delete-users.php?id=<?php echo $user->id; ?>" class="btn btn-danger btn-sm">Delete</a>
                                 </td>
                             </tr>
                         <?php endforeach; ?>

@@ -4,6 +4,7 @@
 
 <?php 
 
+
     if(!isset($_SERVER['HTTP_REFERER'])){
         echo "<script>window.location.href='".ADMINURL."'</script>";
         exit;
@@ -16,6 +17,7 @@
         $app = new App;
         $path = "users.php";
         $app->delete($query, $path);
+
 
     } 
 
