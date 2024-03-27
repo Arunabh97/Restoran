@@ -4,7 +4,6 @@
 
 <?php 
 
-
     $app = new App;
 
     if(isset($_GET['id'])) {
@@ -14,7 +13,6 @@
         if(isset($_POST['submit'])) {
 
             $status = $_POST['status'];
-
 
             $query = "UPDATE orders SET status=:status WHERE id='$id'";
 
@@ -27,10 +25,8 @@
             $app->update($query, $arr, $path);
 
         }
-
         
     }
-
 
 ?>
        <div class="row">
@@ -48,19 +44,13 @@
                         <option selected>Choose Status</option>
                         <option value="Pending">Pending</option>
                         <option value="Confirmed">Confirmed</option>
+                        <option value="Completed">Completed</option>
                     </select>
                     </div>
 
-                    <br>
-                
-
-        
-                    <!-- Submit button -->
                     <button type="submit" name="submit" class="btn btn-primary  mb-4 text-center">update</button>
 
-          
               </form>
-
             </div>
           </div>
         </div>
