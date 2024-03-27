@@ -17,7 +17,7 @@
             <div class="card-body">
               <h5 class="card-title mb-4 d-inline">Bookings</h5>
             
-              <table class="table">
+              <table class="table table-striped">
                 <thead>
                   <tr>
                     <th scope="col">name</th>
