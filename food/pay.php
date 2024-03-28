@@ -14,7 +14,7 @@ if (!isset($_SESSION['user_id'])) {
 }
 
 // Initialize Razorpay with your API key and secret
-$razorpay = new Razorpay\Api\Api('rzp_test_FaDquQvryAR0L8', 'NkcrCAQCRWIq0mHz7DebVjGE');
+$razorpay = new Razorpay\Api\Api('rzp_test_y2Kh0hf5Nte5vu', 'JdWtSiishh5s3oHCnZzIrQmj');
 
 ?>
 
@@ -107,7 +107,7 @@ $razorpay = new Razorpay\Api\Api('rzp_test_FaDquQvryAR0L8', 'NkcrCAQCRWIq0mHz7De
         </div>
         <script>
             var options = {
-                key: 'rzp_test_FaDquQvryAR0L8',
+                key: 'rzp_test_y2Kh0hf5Nte5vu',
                 amount: <?php echo $_SESSION['total_price'] * 100; ?>,
                 currency: 'INR',
                 name: 'Restoran',
