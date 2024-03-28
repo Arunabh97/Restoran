@@ -43,9 +43,9 @@
                       </td>
                       <td><?php echo $booking->created_at; ?></td>
                       <td><?php echo $booking->status; ?></td>
-                      <td><a href="status.php?id=<?php echo $booking->id; ?>" class="btn btn-primary  text-center ">status</a></td>
+                      <td><a href="status.php?id=<?php echo $booking->id; ?>" class="btn btn-primary  text-center ">STATUS</a></td>
 
-                      <td><a href="delete-bookings.php?id=<?php echo $booking->id; ?>" class="btn btn-danger  text-center ">delete</a></td>
+                      <td><a href="delete-bookings.php?id=<?php echo $booking->id; ?>" class="btn btn-danger  text-center ">DELETE</a></td>
                     </tr>
                   <?php endforeach; ?>  
                 </tbody>

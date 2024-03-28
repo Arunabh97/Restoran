@@ -1,9 +1,11 @@
 <?php require "../config/config.php"; ?>
 <?php require "../libs/App.php"; ?>
 <?php require "../includes/header.php"; ?>
+
 <?php 
 
-
+    $app = new App;
+    
     if(isset($_POST['submit'])) {
 
         $review = $_POST['review'];
