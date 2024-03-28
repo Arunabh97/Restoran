@@ -16,7 +16,6 @@
 
     $app = new App;
 
-
     if(isset($_POST['submit'])) {
 
         $name = $_POST['name'];
@@ -50,6 +49,14 @@
 
         $app->insert($query, $arr, $path);
 
+        $update_query = "UPDATE foods f
+        JOIN cart c ON f.id = c.item_id
+        SET f.stock_quantity = f.stock_quantity - c.quantity
+        WHERE c.user_id = :user_id";
+
+        $update_arr = [':user_id' => $user_id];
+
+        $app->update($update_query, $update_arr, $path);
     }
 
 ?>
