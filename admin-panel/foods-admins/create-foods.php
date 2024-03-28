@@ -29,7 +29,7 @@
             ":description" =>  $description,
             ":meal_id" =>  $meal_id,
             ":image" =>  $image,
-            ":stock_quantity" => $stock_quantity,
+            ":stock_quantity" => $stock_quantity
         ];
 
         $path = "show-foods.php";
@@ -77,7 +77,7 @@
                   <select name="meal_id" class="form-select  form-control" aria-label="Default select example">
                     <option selected>Choose Meal</option>
                     <option value="1">Breakfast</option>
-                    <option value="2">Launch</option>
+                    <option value="2">Lunch</option>
                     <option value="3">Dinner</option>
                     <option value="4">Starters</option>
                     <option value="5">Main Courses</option>
