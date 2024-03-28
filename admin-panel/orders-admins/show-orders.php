@@ -23,7 +23,7 @@ $pendingOrdersResult = $app->selectAll($pendingOrdersQuery);
 $pendingOrders = $pendingOrdersResult[0]->pendingOrders;
 
 // Completed Orders
-$completedOrdersQuery = "SELECT COUNT(*) AS completedOrders FROM orders WHERE status = 'completed'";
+$completedOrdersQuery = "SELECT COUNT(*) AS completedOrders FROM orders WHERE status = 'Delivered'";
 $completedOrdersResult = $app->selectAll($completedOrdersQuery);
 $completedOrders = $completedOrdersResult[0]->completedOrders;
 

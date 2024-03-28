@@ -77,7 +77,7 @@ if(isset($_GET['id'])) {
                             <h2>Payment details successfully stored in the database.</h2>
                             <p>Payment ID: ' . $payment_id . '</p>
                             <p>You will be redirected to the orders page in 5 seconds.</p>
-                            <p>If not redirected, <a href="/../coffee-blend/users/orders.php">click here</a>.</p>
+                            <p>If not redirected, <a href="/../restoran/users/orders.php">click here</a>.</p>
                         </div>
                     </body>
                 </html>';

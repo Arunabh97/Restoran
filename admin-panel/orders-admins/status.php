@@ -44,7 +44,7 @@
                         <option selected>Choose Status</option>
                         <option value="Pending">Pending</option>
                         <option value="Confirmed">Confirmed</option>
-                        <option value="Completed">Delivered</option>
+                        <option value="Delivered">Delivered</option>
                     </select>
                     </div>
 
