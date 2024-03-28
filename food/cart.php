@@ -25,13 +25,18 @@ $cart_items = $app->selectAll($query);
 
 $all_price = 0;
 
-foreach($cart_items as $cart_item) {
-    $all_price += ($cart_item->price * $cart_item->quantity);
+if(is_array($cart_items) || is_object($cart_items)) {
+    foreach($cart_items as $cart_item) {
+        $all_price += ($cart_item->price * $cart_item->quantity);
+    }
+} else {
+    $cart_items = [];
 }
 
 $_SESSION['total_price'] = $all_price;
 
 ?>
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" crossorigin="anonymous" />
 <style>
     .total-table {

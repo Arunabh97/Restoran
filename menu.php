@@ -115,7 +115,11 @@
                                                     <span class="text-primary">₹<?php echo $meal_4->price; ?></span>
                                                 </h5>
                                                 <small class="fst-italic" style="color: green; font-size: 15px;"><?php echo $meal_4->description; ?></small>
-
+                                                <?php if ($meal_4->stock_quantity <= 0) : ?>
+                                                    <p class="text-danger">Out of Stock</p>
+                                                <?php else : ?>
+                                                    <p>In Stock Available</p>
+                                                <?php endif; ?>
                                                 <a type="button" href="<?php echo APPURL; ?>/food/add-cart.php?id=<?php echo $meal_4->id; ?>" class="btn btn-primary py-2 top-0 end-0 mt-2 me-2">view</a>
                                             </div>
                                         </div>
@@ -136,6 +140,11 @@
                                                         <span class="text-primary">₹<?php echo $meal_5->price; ?></span>
                                                     </h5>
                                                     <small class="fst-italic" style="color: blue; font-size: 15px;"><?php echo $meal_5->description; ?></small>
+                                                    <?php if ($meal_5->stock_quantity <= 0) : ?>
+                                                        <p class="text-danger">Out of Stock</p>
+                                                    <?php else : ?>
+                                                        <p>In Stock Available</p>
+                                                    <?php endif; ?>
                                                     <a type="button" href="<?php echo APPURL; ?>/food/add-cart.php?id=<?php echo $meal_5->id; ?>" class="btn btn-primary py-2 top-0 end-0 mt-2 me-2">view</a>
                                                 </div>
                                         </div>
@@ -156,6 +165,11 @@
                                                                 <span class="text-primary">₹<?php echo $meal_6->price; ?></span>
                                                             </h5>
                                                             <small class="fst-italic" style="color: green; font-size: 15px;"><?php echo $meal_6->description; ?></small>
+                                                            <?php if ($meal_6->stock_quantity <= 0) : ?>
+                                                                <p class="text-danger">Out of Stock</p>
+                                                            <?php else : ?>
+                                                                <p>In Stock Available</p>
+                                                            <?php endif; ?>
                                                             <a type="button" href="<?php echo APPURL; ?>/food/add-cart.php?id=<?php echo $meal_6->id; ?>" class="btn btn-primary py-2 top-0 end-0 mt-2 me-2">view</a>
                                                         </div>
                                                 </div>
@@ -176,6 +190,11 @@
                                                                 <span class="text-primary">₹<?php echo $meal_7->price; ?></span>
                                                             </h5>
                                                             <small class="fst-italic" style="color: blue; font-size: 15px;"><?php echo $meal_7->description; ?></small>
+                                                            <?php if ($meal_7->stock_quantity <= 0) : ?>
+                                                                <p class="text-danger">Out of Stock</p>
+                                                            <?php else : ?>
+                                                                <p>In Stock Available</p>
+                                                            <?php endif; ?>
                                                             <a type="button" href="<?php echo APPURL; ?>/food/add-cart.php?id=<?php echo $meal_7->id; ?>" class="btn btn-primary py-2 top-0 end-0 mt-2 me-2">view</a>
                                                         </div>
                                                 </div>
@@ -196,6 +215,11 @@
                                                                 <span class="text-primary">₹<?php echo $meal_8->price; ?></span>
                                                             </h5>
                                                             <small class="fst-italic" style="color: green; font-size: 15px;"><?php echo $meal_8->description; ?></small>
+                                                            <?php if ($meal_8->stock_quantity <= 0) : ?>
+                                                                <p class="text-danger">Out of Stock</p>
+                                                            <?php else : ?>
+                                                                <p>In Stock Available</p>
+                                                            <?php endif; ?>
                                                             <a type="button" href="<?php echo APPURL; ?>/food/add-cart.php?id=<?php echo $meal_8->id; ?>" class="btn btn-primary py-2 top-0 end-0 mt-2 me-2">view</a>
                                                         </div>
                                                 </div>

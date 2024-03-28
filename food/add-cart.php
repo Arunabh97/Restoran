@@ -59,7 +59,7 @@
 ?>
 <style>
     .custom-quantity {
-    width: 200px;
+    width: 205px;
     height: 50px;
 }
 
@@ -125,20 +125,24 @@
                                 <button type="button" class="btn btn-outline-secondary btn-sm" onclick="increaseQuantity()">+</button>
                             </div>
                             <?php if(isset($_SESSION['user_id'])) : ?>
-                                <?php if($count > 0) : ?>
-                                    <button name="submit" type="submit" class="btn btn-primary py-3 px-5 mt-2" disabled>Added to Cart</button>
-                                <?php else : ?>
-                                    <button name="submit" type="submit" class="btn btn-primary py-3 px-5 mt-2">Add to Cart</button>
-                                <?php endif; ?>    
-                            <?php endif; ?>    
-
-                        </form>    
-                    </div>
-                </div>
+                        <?php if($one->stock_quantity <= 0) : ?>
+                            <p class="text-danger">Out of Stock</p>
+                        <?php else : ?>
+                            <p>Available Stock: <?php echo $one->stock_quantity; ?></p>
+                            <?php if($count > 0) : ?>
+                                <button name="submit" type="submit" class="btn btn-primary py-3 px-5 mt-2" disabled>Added to Cart</button>
+                            <?php else : ?>
+                                <button name="submit" type="submit" class="btn btn-primary py-3 px-5 mt-2">Add to Cart</button>
+                            <?php endif; ?>
+                        <?php endif; ?>    
+                    <?php endif; ?>    
+                </form>    
             </div>
         </div>
+    </div>
+</div>
 
-        <script>
+<script>
     function decreaseQuantity() {
         var quantityInput = document.querySelector('input[name="quantity"]');
         var currentValue = parseInt(quantityInput.value);
@@ -155,6 +159,7 @@
         }
     }
 </script>
+
 <?php require "../includes/footer.php"; ?>
 
    

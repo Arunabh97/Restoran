@@ -61,8 +61,8 @@
                                         <td>₹<?php echo $order->total_price; ?></td>
                                         <td><?php echo $order->status; ?></td>
                                         <td class="inovice">
-												<?php if ($order->status == "Confirmed") : ?>
-                                                    <a class="btn btn-success" href="print.php?order_id=<?php echo $order->id; ?>" target="_blank">Download</a>
+												<?php if ($order->status == "Delivered") : ?>
+                                                    <a class="btn btn-success" href="print.php?order_id=<?php echo $order->id; ?>" target="_blank">Print</a>
 												<?php else : ?>
 													N/A
 												<?php endif; ?>

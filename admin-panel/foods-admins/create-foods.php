@@ -15,12 +15,13 @@
         $description = $_POST['description'];
         $meal_id = $_POST['meal_id'];
         $image = $_FILES['image']['name'];
+        $stock_quantity = $_POST['stock_quantity'];
 
         $dir = "foods-images/" . basename($image);
 
 
-        $query = "INSERT INTO foods (name, price, description, meal_id, image) VALUES (:name, 
-        :price, :description, :meal_id, :image)";
+        $query = "INSERT INTO foods (name, price, description, meal_id, image, stock_quantity) VALUES (:name, 
+        :price, :description, :meal_id, :image, :stock_quantity)";
 
         $arr = [
             ":name" =>  $name,
@@ -28,6 +29,7 @@
             ":description" =>  $description,
             ":meal_id" =>  $meal_id,
             ":image" =>  $image,
+            ":stock_quantity" => $stock_quantity,
         ];
 
         $path = "show-foods.php";
@@ -51,12 +53,15 @@
           <form method="POST" action="create-foods.php" enctype="multipart/form-data">
                 <!-- Email input -->
                 <div class="form-outline mb-4 mt-4">
-                  <input type="text" name="name" id="form2Example1" class="form-control" placeholder="name" />
+                  <input type="text" name="name" id="form2Example1" class="form-control" placeholder="Name" />
                  
                 </div>
                 <div class="form-outline mb-4 mt-4">
-                  <input type="text" name="price" id="form2Example1" class="form-control" placeholder="price" />
+                  <input type="text" name="price" id="form2Example1" class="form-control" placeholder="Price" />
                  
+                </div>
+                <div class="form-outline mb-4 mt-4">
+                        <input type="number" name="stock_quantity" id="form2Example1" class="form-control" placeholder="Stock Quantity" />
                 </div>
                 <div class="form-outline mb-4 mt-4">
                   <input type="file" name="image" id="form2Example1" class="form-control"  />
@@ -87,7 +92,7 @@
 
       
                 <!-- Submit button -->
-                <button type="submit" name="submit" class="btn btn-primary  mb-4 text-center">create</button>
+                <button type="submit" name="submit" class="btn btn-primary  mb-4 text-center">Create</button>
 
           
               </form>

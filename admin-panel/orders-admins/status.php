@@ -44,11 +44,11 @@
                         <option selected>Choose Status</option>
                         <option value="Pending">Pending</option>
                         <option value="Confirmed">Confirmed</option>
-                        <option value="Completed">Completed</option>
+                        <option value="Completed">Delivered</option>
                     </select>
                     </div>
 
-                    <button type="submit" name="submit" class="btn btn-primary  mb-4 text-center">update</button>
+                    <button type="submit" name="submit" class="btn btn-primary  mb-4 text-center">Update</button>
 
               </form>
             </div>
